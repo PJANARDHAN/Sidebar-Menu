@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.sidebar
+{
+    left: -200px;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+    
+}
+.sidebar header
+{
+    line-height:60px;
+    text-align: center;
+    color: white;
+    background: #063146;
+    font-size: 22px;
+    user-select: none;
+}
+.sidebar ul a
+{
+    line-height: 40px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+ul li:hover a
+{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 20px;
+}
+#check{
+    display: none;
+}
+label #btn,label #cancel
+{
+position: absolute;
+cursor: pointer;
+background: #042331;
+}
+label #btn
+{
+    top: 25px;
+    left: 40px;
+    font-size: 25px;
+    padding: 6px 12px;
+    color: white;
+    transition: all .5s;
+    border-radius: 10px;
+   
+}
+label #cancel
+{
+    top: 17px;
+    z-index: 111;
+    left: -155px;
+    font-size: 20px;
+    color: #0a5275;
+    padding: 4px 8px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+#check:checked~ .sidebar
+{
+    left: 0;
+}
+#check:checked~ label #btn
+{
+    left: 200px;
+    pointer-events: none;
+    opacity: 0;
+}
+#check:checked~ label #cancel
+{
+    left: 155px;
+    
+}
+#check:checked ~  section
+{
+    margin-left: 200px;
+    
+}
+section{
+    background: url(slide3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    width: 405px;
+    padding: 45px;
+    background: rgba(0, 0, 0, .8);
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+}
+.box h1
+{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding-bottom: 40px;
+}
+.box .inputbox1
+{
+    position: relative;
+}
+.box .inputbox1 input
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    color: white;
+    border-bottom:1px solid white;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.box .inputbox1 label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .inputbox1 input:focus~label
+{
+    top: -20px;
+    color: turquoise;
+}
+
+.box input[type="submit"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    background: #03a9f4;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
